@@ -1,2 +1,2 @@
 export * from "./cli";
-export * as readme from "./features/readme";
+export * as link from "./features/link";

@@ -11,6 +11,9 @@ importers:
       citty:
         specifier: ^0.1.6
         version: 0.1.6
+      consola:
+        specifier: ^3.4.2
+        version: 3.4.2
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^4.12.0

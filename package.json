@@ -28,7 +28,8 @@
     "release": "bumpp --no-push -c \"release: v%s\""
   },
   "dependencies": {
-    "citty": "^0.1.6"
+    "citty": "^0.1.6",
+    "consola": "^3.4.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",

@@ -1,6 +1,6 @@
 import { defineCommand, runMain } from "citty";
 import { description, version } from "../package.json";
-import readme from "./features/readme";
+import link from "./features/link";
 
 const cmd = defineCommand({
     meta: {
@@ -9,7 +9,7 @@ const cmd = defineCommand({
         description
     },
     subCommands: {
-        readme
+        link
     }
 });
 
