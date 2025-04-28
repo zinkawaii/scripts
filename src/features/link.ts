@@ -26,26 +26,32 @@ export function link(root: string, packages: string[]) {
 
         if (!existsSync(sourcePath)) {
             verbose && logger.error(
-                `file \`${relative(root, sourcePath)}\` does not exist.`
+                `file ${relate(sourcePath)} does not exist.`
             );
             return;
         }
         if (!existsSync(targetDir)) {
             verbose && logger.error(
-                `folder \`${relative(root, targetDir)}\` does not exist.`
+                `folder ${relate(targetDir)} does not exist.`
+            );
+            return;
+        }
+        if (existsSync(targetPath)) {
+            logger.info(
+                `file ${relate(targetPath)} already exists.`
             );
             return;
         }
         try {
             linkSync(sourcePath, targetPath);
             logger.success(
-                `linked \`${relative(root, sourcePath)}\` to \`${relative(root, targetPath)}\`.`
+                `linked ${relate(sourcePath)} to ${relate(targetPath)}.`
             );
         }
-        catch {
-            verbose && logger.error(
-                `failed to link \`${relative(root, sourcePath)}\` to \`${relative(root, targetPath)}\`.`
-            );
-        }
+        catch {}
+    }
+
+    function relate(path: string) {
+        return "`" + relative(root, path) + "`";
     }
 }
