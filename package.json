@@ -1,0 +1,40 @@
+{
+  "name": "@zinkawaii/scripts",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.10.0",
+  "description": "",
+  "author": "KazariEX",
+  "license": "MIT",
+  "repository": "zinkawaii/scripts",
+  "keywords": [],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown -w",
+    "prepack": "pnpm run build",
+    "release": "bumpp --no-push -c \"release: v%s\""
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.12.0",
+    "@zinkawaii/eslint-config": "^0.2.3",
+    "@zinkawaii/tsconfig": "^0.0.1",
+    "bumpp": "^10.1.0",
+    "eslint": "^9.25.1",
+    "tsdown": "^0.9.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "rolldown",
+      "unrs-resolver"
+    ]
+  }
+}
