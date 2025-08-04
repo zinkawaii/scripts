@@ -6,11 +6,11 @@ const cmd = defineCommand({
     meta: {
         name: "zin",
         version,
-        description
+        description,
     },
     subCommands: {
-        link
-    }
+        link,
+    },
 });
 
 export function run() {

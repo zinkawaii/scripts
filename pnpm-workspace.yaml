@@ -1,0 +1,16 @@
+shamefullyHoist: true
+
+catalog:
+  "@antfu/eslint-config": ^5.1.0
+  "@types/node": ^24.1.0
+  "@zinkawaii/eslint-config": ^0.3.0
+  "@zinkawaii/tsconfig": ^0.0.2
+  bumpp: ^10.2.2
+  citty: ^0.1.6
+  consola: ^3.4.2
+  eslint: ^9.32.0
+  tsdown: ^0.13.2
+
+onlyBuiltDependencies:
+  - rolldown
+  - unrs-resolver

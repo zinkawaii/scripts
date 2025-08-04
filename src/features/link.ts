@@ -6,11 +6,11 @@ import { logger } from "../utils/logger";
 export default defineCommand({
     meta: {
         name: "link",
-        description: "Link some files into packages"
+        description: "Link some files into packages",
     },
     setup(context) {
         link(process.cwd(), context.args._);
-    }
+    },
 });
 
 export function link(root: string, packages: string[]) {
@@ -26,26 +26,26 @@ export function link(root: string, packages: string[]) {
 
         if (!existsSync(sourcePath)) {
             verbose && logger.error(
-                `file ${relate(sourcePath)} does not exist.`
+                `file ${relate(sourcePath)} does not exist.`,
             );
             return;
         }
         if (!existsSync(targetDir)) {
             verbose && logger.error(
-                `folder ${relate(targetDir)} does not exist.`
+                `folder ${relate(targetDir)} does not exist.`,
             );
             return;
         }
         if (existsSync(targetPath)) {
             logger.info(
-                `file ${relate(targetPath)} already exists.`
+                `file ${relate(targetPath)} already exists.`,
             );
             return;
         }
         try {
             linkSync(sourcePath, targetPath);
             logger.success(
-                `linked ${relate(sourcePath)} to ${relate(targetPath)}.`
+                `linked ${relate(sourcePath)} to ${relate(targetPath)}.`,
             );
         }
         catch {}

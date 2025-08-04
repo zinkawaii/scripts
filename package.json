@@ -2,7 +2,7 @@
   "name": "@zinkawaii/scripts",
   "type": "module",
   "version": "0.0.2",
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.14.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
@@ -28,22 +28,16 @@
     "release": "bumpp --no-push -c \"release: v%s\""
   },
   "dependencies": {
-    "citty": "^0.1.6",
-    "consola": "^3.4.2"
+    "citty": "catalog:",
+    "consola": "catalog:"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.12.0",
-    "@types/node": "^22.15.2",
-    "@zinkawaii/eslint-config": "^0.2.3",
-    "@zinkawaii/tsconfig": "^0.0.1",
-    "bumpp": "^10.1.0",
-    "eslint": "^9.25.1",
-    "tsdown": "^0.9.9"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "rolldown",
-      "unrs-resolver"
-    ]
+    "@antfu/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "@zinkawaii/eslint-config": "catalog:",
+    "@zinkawaii/tsconfig": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "tsdown": "catalog:"
   }
 }
