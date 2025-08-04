@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "citty": "catalog:",
-    "consola": "catalog:"
+    "consola": "catalog:",
+    "zx": "catalog:"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",

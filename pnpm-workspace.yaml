@@ -10,6 +10,7 @@ catalog:
   consola: ^3.4.2
   eslint: ^9.32.0
   tsdown: ^0.13.2
+  zx: ^8.7.2
 
 onlyBuiltDependencies:
   - rolldown

@@ -33,6 +33,9 @@ catalogs:
     tsdown:
       specifier: ^0.13.2
       version: 0.13.2
+    zx:
+      specifier: ^8.7.2
+      version: 8.7.2
 
 importers:
 
@@ -44,6 +47,9 @@ importers:
       consola:
         specifier: 'catalog:'
         version: 3.4.2
+      zx:
+        specifier: 'catalog:'
+        version: 8.7.2
     devDependencies:
       '@antfu/eslint-config':
         specifier: 'catalog:'
@@ -1624,6 +1630,11 @@ packages:
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+
+  zx@8.7.2:
+    resolution: {integrity: sha512-4Wtl46msLFx6QW6GjLu1aRnFhavukT4VSp4tdXvfRIBRNW3RP7Si3RlRFD7YeQeecQBacVFRQQgm5LTvE/YEGQ==}
+    engines: {node: '>= 12.17.0'}
+    hasBin: true
 
 snapshots:
 
@@ -3416,3 +3427,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zwitch@2.0.4: {}
+
+  zx@8.7.2: {}
