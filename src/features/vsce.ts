@@ -23,7 +23,9 @@ export async function vsce(root: string, ...args: string[]) {
 
   try {
     await writeFile(dir, JSON.stringify(json));
-    await exec("pnpm", ["vsce", ...args]);
+    await exec("pnpm", ["vsce", ...args], {
+      throwOnError: true,
+    });
   }
   catch (error) {
     logger.error(error);
