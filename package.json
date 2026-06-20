@@ -2,18 +2,17 @@
   "name": "@zinkawaii/scripts",
   "type": "module",
   "version": "0.0.3",
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@11.8.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
   "repository": "zinkawaii/scripts",
   "keywords": [],
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "bin": {
     "zin": "./bin/zin.js"
   },
@@ -33,7 +32,6 @@
     "tinyexec": "catalog:"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
     "@types/node": "catalog:",
     "@zinkawaii/eslint-config": "catalog:",
     "@zinkawaii/tsconfig": "catalog:",

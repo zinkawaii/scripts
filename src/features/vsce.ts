@@ -5,30 +5,30 @@ import { exec } from "tinyexec";
 import { logger } from "../utils/logger";
 
 export default defineCommand({
-    meta: {
-        name: "vsce",
-        description: "@vscode/vsce for pnpm catalog",
-    },
-    setup(context) {
-        vsce(process.cwd(), ...context.args._);
-    },
+  meta: {
+    name: "vsce",
+    description: "@vscode/vsce for pnpm catalog",
+  },
+  setup(context) {
+    vsce(process.cwd(), ...context.args._);
+  },
 });
 
 export async function vsce(root: string, ...args: string[]) {
-    const dir = resolve(root, "package.json");
-    const text = await readFile(dir, "utf-8");
-    const json = JSON.parse(text);
+  const dir = resolve(root, "package.json");
+  const text = await readFile(dir, "utf-8");
+  const json = JSON.parse(text);
 
-    json.devDependencies["@types/vscode"] = json.engines.vscode;
+  json.devDependencies["@types/vscode"] = json.engines.vscode;
 
-    try {
-        await writeFile(dir, JSON.stringify(json));
-        await exec("pnpm", ["vsce", ...args]);
-    }
-    catch (error) {
-        logger.error(error);
-    }
-    finally {
-        await writeFile(dir, text);
-    }
+  try {
+    await writeFile(dir, JSON.stringify(json));
+    await exec("pnpm", ["vsce", ...args]);
+  }
+  catch (error) {
+    logger.error(error);
+  }
+  finally {
+    await writeFile(dir, text);
+  }
 }

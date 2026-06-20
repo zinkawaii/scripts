@@ -4,17 +4,17 @@ import link from "./features/link";
 import vsce from "./features/vsce";
 
 const cmd = defineCommand({
-    meta: {
-        name: "zin",
-        version,
-        description,
-    },
-    subCommands: {
-        link,
-        vsce,
-    },
+  meta: {
+    name: "zin",
+    version,
+    description,
+  },
+  subCommands: {
+    link,
+    vsce,
+  },
 });
 
 export function run() {
-    return runMain(cmd);
+  return runMain(cmd);
 }
