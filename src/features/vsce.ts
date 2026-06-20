@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { defineCommand } from "citty";
-import { $ } from "zx";
+import { exec } from "tinyexec";
 import { logger } from "../utils/logger";
 
 export default defineCommand({
@@ -23,7 +23,7 @@ export async function vsce(root: string, ...args: string[]) {
 
     try {
         await writeFile(dir, JSON.stringify(json));
-        await $`pnpm vsce ${args.join(" ")}`;
+        await exec("pnpm", ["vsce", ...args]);
     }
     catch (error) {
         logger.error(error);

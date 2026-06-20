@@ -30,7 +30,7 @@
   "dependencies": {
     "citty": "catalog:",
     "consola": "catalog:",
-    "zx": "catalog:"
+    "tinyexec": "catalog:"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",

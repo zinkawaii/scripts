@@ -9,8 +9,8 @@ catalog:
   citty: ^0.1.6
   consola: ^3.4.2
   eslint: ^9.32.0
+  tinyexec: ^1.2.4
   tsdown: ^0.13.2
-  zx: ^8.7.2
 
 onlyBuiltDependencies:
   - rolldown
