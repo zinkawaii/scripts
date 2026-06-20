@@ -1,3 +1,3 @@
 export * from "./cli";
-export * as link from "./features/link";
-export * as vsce from "./features/vsce";
+export { link } from "./features/link";
+export { vsce } from "./features/vsce";
