@@ -2,7 +2,7 @@
   "name": "@zinkawaii/scripts",
   "type": "module",
   "version": "0.0.5",
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "pnpm@12.15.0",
   "description": "Utakata na Shiawase",
   "author": "KazariEX",
   "license": "MIT",
