@@ -26,6 +26,14 @@
     "prepack": "pnpm run build",
     "release": "bumpp --no-push -c \"release: v%s\""
   },
+  "peerDependencies": {
+    "bumpp": "catalog:"
+  },
+  "peerDependenciesMeta": {
+    "bumpp": {
+      "optional": true
+    }
+  },
   "dependencies": {
     "citty": "catalog:",
     "consola": "catalog:",

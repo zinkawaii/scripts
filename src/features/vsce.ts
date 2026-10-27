@@ -2,15 +2,14 @@ import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { defineCommand } from "citty";
 import { exec } from "tinyexec";
-import { logger } from "../utils/logger";
 
 export default defineCommand({
   meta: {
     name: "vsce",
     description: "@vscode/vsce for pnpm catalog",
   },
-  setup(context) {
-    vsce(process.cwd(), ...context.args._);
+  async setup(context) {
+    await vsce(process.cwd(), ...context.args._);
   },
 });
 
@@ -26,9 +25,6 @@ export async function vsce(root: string, ...args: string[]) {
     await exec("pnpm", ["vsce", ...args], {
       throwOnError: true,
     });
-  }
-  catch (error) {
-    logger.error(error);
   }
   finally {
     await writeFile(dir, text);
